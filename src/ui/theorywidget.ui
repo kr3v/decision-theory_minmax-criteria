@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TheoryWidget</class>
+ <widget class="QWidget" name="TheoryWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>910</width>
+    <height>530</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>891</width>
+     <height>511</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="layout_main">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetMaximumSize</enum>
+    </property>
+    <item>
+     <widget class="QTextBrowser" name="text_theory">
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Мінімаксний критерій оптимальності&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;	Мінімаксний критерій має такий вигляд: &lt;/span&gt;&lt;img src=&quot;:/images/clip_image002.gif&quot; width=&quot;180&quot; height=&quot;39&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;	Оскільки станів природи лише два, то матимемо &lt;/span&gt;&lt;img src=&quot;:/images/clip_image004.gif&quot; width=&quot;147&quot; height=&quot;39&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;. Позначимо через &lt;/span&gt;&lt;img src=&quot;:/images/clip_image006.gif&quot; width=&quot;61&quot; height=&quot;25&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; відповідні координати точки платіжної множини. Одержимо &lt;/span&gt;&lt;img src=&quot;:/images/clip_image008.gif&quot; width=&quot;151&quot; height=&quot;25&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;	Очевидно, що &lt;/span&gt;&lt;img src=&quot;:/images/clip_image010.gif&quot; width=&quot;203&quot; height=&quot;57&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;. Дане рівняння є рівнянням прямокутного клина. Отже, щоб знайти рандомізований розв’язок за мінімаксним критерієм, необхідно рухати прямокутний клин по бісектрисі першої чверті координатної площини (&lt;/span&gt;&lt;img src=&quot;:/images/clip_image012.gif&quot; width=&quot;59&quot; height=&quot;25&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;) до першого перетину із платіжною множиною. Одержана точка і буде розв’язком.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Алгоритм пошуку рандомізованого розв’язку за мінімаксним критерієм&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;	1.&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman'; font-size:7pt;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Побудувати платіжну множину за матрицею втрат.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;	2.&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman'; font-size:7pt;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Побудувати прямокутний клин та рухати його по прямій &lt;/span&gt;&lt;img src=&quot;:/images/clip_image012.gif&quot; width=&quot;59&quot; height=&quot;25&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; до першого перетину із платіжною множиною. Визначити точки &lt;/span&gt;&lt;img src=&quot;:/images/clip_image015.gif&quot; width=&quot;21&quot; height=&quot;25&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; (&lt;/span&gt;&lt;img src=&quot;:/images/clip_image017.gif&quot; width=&quot;43&quot; height=&quot;25&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;) та &lt;/span&gt;&lt;img src=&quot;:/images/clip_image019.gif&quot; width=&quot;25&quot; height=&quot;28&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; (&lt;/span&gt;&lt;img src=&quot;:/images/clip_image021.gif&quot; width=&quot;49&quot; height=&quot;28&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;), що задають відрізок платіжної множини, із яким перетнувся клин.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;	3.&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman'; font-size:7pt;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Записати опуклу комбінацію кінців відрізка, а саме:&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; &lt;/span&gt;&lt;img src=&quot;:/images/clip_image023.gif&quot; width=&quot;192&quot; height=&quot;63&quot; /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;або, враховуючи, що &lt;/span&gt;&lt;img src=&quot;:/images/clip_image025.gif&quot; width=&quot;83&quot; height=&quot;28&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;, розв’язати наступне:&lt;/span&gt;&lt;img src=&quot;:/images/clip_image027.gif&quot; width=&quot;212&quot; height=&quot;63&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;	4.&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman'; font-size:7pt;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Оскільки &lt;/span&gt;&lt;img src=&quot;:/images/clip_image012.gif&quot; width=&quot;59&quot; height=&quot;25&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;, то можемо одержати &lt;/span&gt;&lt;img src=&quot;:/images/clip_image029.gif&quot; width=&quot;249&quot; height=&quot;28&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;. У результаті розв’язання цього рівняння знайдемо &lt;/span&gt;&lt;img src=&quot;:/images/clip_image031.gif&quot; width=&quot;15&quot; height=&quot;16&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;	5.&lt;/span&gt;&lt;span style=&quot; font-family:'Times New Roman'; font-size:7pt;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Рандомізований розв’язок буде &lt;/span&gt;&lt;img src=&quot;:/images/clip_image033.gif&quot; width=&quot;259&quot; height=&quot;44&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:13pt; font-weight:600;&quot;&gt;	Примітка.&lt;/span&gt;&lt;span style=&quot; font-size:13pt;&quot;&gt; Якщо клин торкнеться платіжної множини у вершині, то рандомізований розв’язок збігатиметься із нерандомізованим і становитиме  &lt;/span&gt;&lt;img src=&quot;:/images/clip_image035.gif&quot; width=&quot;160&quot; height=&quot;44&quot; /&gt;&lt;span style=&quot; font-size:13pt;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;        &lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;	Приклад&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;	Матриця втрат має вигляд&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;        &lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/images/clip_image037.gif&quot; width=&quot;89&quot; height=&quot;111&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;. &lt;/span&gt;        &lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;	Знайдемо рандомізований розв’язок для цієї задачі за мінімаксним критерієм.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;	Геометрична інтерпретація критерію подана на рис. 1.1.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;	&lt;img src=&quot;:/images/clip_image044.gif&quot; width=&quot;340&quot; height=&quot;292&quot; style=&quot;float: left;&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Із рис. 1.1. бачимо, що прямокутний клин перетинається із відрізком, сформованим точками &lt;/span&gt;&lt;img src=&quot;:/images/clip_image046.gif&quot; width=&quot;23&quot; height=&quot;25&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; (&lt;/span&gt;&lt;img src=&quot;:/images/clip_image048.gif&quot; width=&quot;28&quot; height=&quot;23&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;) та &lt;/span&gt;&lt;img src=&quot;:/images/clip_image050.gif&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; (&lt;/span&gt;&lt;img src=&quot;:/images/clip_image052.gif&quot; width=&quot;27&quot; height=&quot;23&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;). Знайдемо координати точки перетину:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/images/clip_image054.gif&quot; width=&quot;189&quot; height=&quot;57&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;        &lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;(зауважимо, що в цьому випадку &lt;/span&gt;&lt;img src=&quot;:/images/clip_image031.gif&quot; width=&quot;15&quot; height=&quot;16&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; – імовірність того, що &lt;/span&gt;&lt;img src=&quot;:/images/clip_image046.gif&quot; width=&quot;23&quot; height=&quot;25&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; є розв’язком, а &lt;/span&gt;&lt;img src=&quot;:/images/clip_image057.gif&quot; width=&quot;51&quot; height=&quot;24&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; – імовірність того, що розв’язком є &lt;/span&gt;&lt;img src=&quot;:/images/clip_image050.gif&quot; width=&quot;25&quot; height=&quot;25&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;img src=&quot;:/images/clip_image059.gif&quot; width=&quot;252&quot; height=&quot;129&quot; /&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;        &lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;	Тобто рандомізований розв’язок за цим критерієм буде  &lt;/span&gt;&lt;img src=&quot;:/images/clip_image061.gif&quot; width=&quot;80&quot; height=&quot;52&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;. Це означає, що в одному із п’яти випадків ми діємо за першою стратегією, а в інших випадках – за четвертою. &lt;/span&gt;    &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="layout_toOtherWindows">
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_back">
+        <property name="text">
+         <string>Back</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_solver">
+        <property name="text">
+         <string>Solver</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_practice">
+        <property name="text">
+         <string>Practice</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

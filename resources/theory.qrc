@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/clip_image002.gif</file>
+        <file>images/clip_image004.gif</file>
+        <file>images/clip_image006.gif</file>
+        <file>images/clip_image008.gif</file>
+        <file>images/clip_image010.gif</file>
+        <file>images/clip_image012.gif</file>
+        <file>images/clip_image015.gif</file>
+        <file>images/clip_image017.gif</file>
+        <file>images/clip_image019.gif</file>
+        <file>images/clip_image021.gif</file>
+        <file>images/clip_image023.gif</file>
+        <file>images/clip_image025.gif</file>
+        <file>images/clip_image027.gif</file>
+        <file>images/clip_image029.gif</file>
+        <file>images/clip_image031.gif</file>
+        <file>images/clip_image033.gif</file>
+        <file>images/clip_image035.gif</file>
+        <file>images/clip_image037.gif</file>
+        <file>images/clip_image044.gif</file>
+        <file>images/clip_image046.gif</file>
+        <file>images/clip_image048.gif</file>
+        <file>images/clip_image050.gif</file>
+        <file>images/clip_image052.gif</file>
+        <file>images/clip_image054.gif</file>
+        <file>images/clip_image057.gif</file>
+        <file>images/clip_image059.gif</file>
+        <file>images/clip_image061.gif</file>
+    </qresource>
+</RCC>
