@@ -17,9 +17,9 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>10</y>
+     <y>30</y>
      <width>891</width>
-     <height>511</height>
+     <height>491</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="layout_main">
@@ -33,7 +33,7 @@
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;   &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Мінімаксний критерій оптимальності&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt; font-weight:600;&quot;&gt;Рандомізований мінімаксний критерій оптимальності&lt;/span&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;	Мінімаксний критерій має такий вигляд: &lt;/span&gt;&lt;img src=&quot;:/images/clip_image002.gif&quot; width=&quot;180&quot; height=&quot;39&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;	Оскільки станів природи лише два, то матимемо &lt;/span&gt;&lt;img src=&quot;:/images/clip_image004.gif&quot; width=&quot;147&quot; height=&quot;39&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;. Позначимо через &lt;/span&gt;&lt;img src=&quot;:/images/clip_image006.gif&quot; width=&quot;61&quot; height=&quot;25&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt; відповідні координати точки платіжної множини. Одержимо &lt;/span&gt;&lt;img src=&quot;:/images/clip_image008.gif&quot; width=&quot;151&quot; height=&quot;25&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;	Очевидно, що &lt;/span&gt;&lt;img src=&quot;:/images/clip_image010.gif&quot; width=&quot;203&quot; height=&quot;57&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;. Дане рівняння є рівнянням прямокутного клина. Отже, щоб знайти рандомізований розв’язок за мінімаксним критерієм, необхідно рухати прямокутний клин по бісектрисі першої чверті координатної площини (&lt;/span&gt;&lt;img src=&quot;:/images/clip_image012.gif&quot; width=&quot;59&quot; height=&quot;25&quot; /&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;) до першого перетину із платіжною множиною. Одержана точка і буде розв’язком.&lt;/span&gt;&lt;/p&gt;
@@ -77,27 +77,43 @@ p, li { white-space: pre-wrap; }
       <item>
        <widget class="QPushButton" name="button_back">
         <property name="text">
-         <string>Back</string>
+         <string>Повернутися</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="button_solver">
         <property name="text">
-         <string>Solver</string>
+         <string>Автоматичний розв'язок</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="button_practice">
         <property name="text">
-         <string>Practice</string>
+         <string>Практика</string>
         </property>
        </widget>
       </item>
      </layout>
     </item>
    </layout>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>16</x>
+     <y>10</y>
+     <width>881</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Теоретичний модуль</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
  </widget>
  <resources/>

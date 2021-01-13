@@ -75,11 +75,6 @@ void PracticeWidget::on_radioButton_randomizedSolution_clicked()
     ui->spinBox_nonRandomizedSolution_index->setDisabled(true);
 }
 
-void PracticeWidget::on_button_toSolver_clicked()
-{
-    mw_parent->changeWidgetTo<SolverWidget>();
-}
-
 void PracticeWidget::on_button_toTheory_clicked()
 {
     mw_parent->stackWidget<TheoryWidget>(true);
@@ -112,9 +107,9 @@ void PracticeWidget::on_button_verify_clicked()
     if (isRandomized != randomizedSolutionChosen) {
         // bad
         if (randomizedSolutionChosen) {
-            ui->label_error->setText("Randomized solution was chosen, while non-randomized solution was expected.");
+            ui->label_error->setText("Рандомізований розв'язок було обрано, хоча нерандомізований є відповіддю.");
         } else {
-            ui->label_error->setText("Non-randomized solution was chosen, while randomized solution was expected.");
+            ui->label_error->setText("Нерандомізований розв'язок було обрано, хоча рандомізований є відповіддю.");
         }
         ui->label_incorrectValue->setText(QString::number(ui->label_incorrectValue->text().toInt() + 1));
         return;
@@ -139,12 +134,12 @@ void PracticeWidget::on_button_verify_clicked()
         if ((e11 && e22 && eq(expected_solution1_probability, i_probability, 2e-2) && eq(expected_solution2_probability, j_probability, 2e-2)) ||
             (e12 && e21 && eq(expected_solution1_probability, j_probability, 2e-2) && eq(expected_solution2_probability, i_probability, 2e-2))) {
             // good
-            ui->label_error->setText("Correct!");
+            ui->label_error->setText("Вірно!");
             ui->label_correctValue->setText(QString::number(ui->label_correctValue->text().toInt() + 1));
             fillTableValues(ui->table_matrixItems);
         } else {
             // bad
-            auto error = QString("Wrong! Points %1-th %2 and %3-th %4 with probabilities %5 and %6 were expected to be a solution.")
+            auto error = QString("Невірно! Точки %1 %2 та %3 %4 із вірогідностями %5 та %6 є розв'язками.")
                     .arg(n(expected_solution1_index + 1), ss(points[expected_solution1_index]),
                          n(expected_solution2_index + 1), ss(points[expected_solution2_index]),
                          n(roundTo(expected_solution1_probability, 100)),
@@ -158,12 +153,12 @@ void PracticeWidget::on_button_verify_clicked()
 
         if (expectedIndex == index) {
             // good
-            ui->label_error->setText("Correct!");
+            ui->label_error->setText("Вірно!");
             ui->label_correctValue->setText(QString::number(ui->label_correctValue->text().toInt() + 1));
             fillTableValues(ui->table_matrixItems);
         } else {
             // bad
-            ui->label_error->setText(QString("Wrong! Point %1-th %2 was expected to be a solution.")
+            ui->label_error->setText(QString("Невірно! Точка %1 %2 є розв'язком.")
                 .arg(n(expectedIndex + 1), ss(points[expectedIndex])));
             ui->label_incorrectValue->setText(QString::number(ui->label_incorrectValue->text().toInt() + 1));
         }

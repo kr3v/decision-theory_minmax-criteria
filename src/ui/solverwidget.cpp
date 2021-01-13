@@ -41,6 +41,7 @@ SolverWidget::SolverWidget(QWidget *parent, MainWindow* mw_parent) :
     ui->table_matrixItems->verticalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
     ui->button_backToPractice->hide();
+    updateChartView();
 }
 
 SolverWidget::SolverWidget(QWidget *parent, MainWindow* mw_parent, std::vector<Point> points) :
@@ -118,7 +119,7 @@ void SolverWidget::updateChartView() {
     fillMinMaxCriteriaSolutionLog(ui->text_solutionLog, allPoints, solution);
 
     auto chart = new QtCharts::QChart();
-    chart->setTitle("randomized minmax criteria plots");
+    chart->setTitle("Графік розв'язку рандомізованим мінімасним критерієм оптимальності");
 
     addXYAxisSeries(chart, max_x, max_y);
     addRandomizedSolutionsSeries(chart, points);
@@ -255,7 +256,7 @@ void fillMinMaxCriteriaSolutionLog(QTextBrowser* b, std::vector<Point> points, R
         auto p1 = points[parent1_index];
         auto p2 = points[parent2_index];
 
-        s.append("Solving the following equation: <br>");
+        s.append("Розв'язуємо наступне рівняння: <br>");
         s.append("x*l<sub>i1</sub> + (1-x)*<sub>j1</sub> = x*l<sub>i2</sub> + (1-x)*l<sub>j2</sub>: <br>");
         s.append("<br>");
 
@@ -271,19 +272,15 @@ void fillMinMaxCriteriaSolutionLog(QTextBrowser* b, std::vector<Point> points, R
         s.append(QString("x = %2/%1 = %3 <br>").arg(n(x_coeff), n(f_coeff), n(x)));
         s.append("<br>");
 
-        if (x <= 0.5) {
-            std::swap(p1, p2);
-            std::swap(parent1_index, parent2_index);
-        }
-        s.append(QString("So, l<sub>%1</sub>=%2 would be taken with %3 probability, while l<sub>%4</sub>=%5 would be taken with %6 probability.")
+        s.append(QString("Отже, l<sub>%1</sub>=%2 має бути обрана із вірогідністю %3, тоді як l<sub>%4</sub>=%5 має бути обраною із вірогідністю %6.")
                  .arg(n(parent1_index + 1), ss(p1), n(x),
                       n(parent2_index + 1), ss(p2), n(1-x)));
         b->setHtml(s);
     };
     auto singleParentInSolution = [=](int parent) {
         QString s = "";
-        s.append("Wedge intersected with non-randomized solution.<br>");
-        s.append(QString("So, l<sub>%1</sub>=%2 will be always taken.").arg(n(parent + 1), ss(points[parent])));
+        s.append("Клин перетнувся із нерандомізованим розв'язком.<br>");
+        s.append(QString("Отже, l<sub>%1</sub>=%2 завжди має бути обрана.").arg(n(parent + 1), ss(points[parent])));
         b->setHtml(s);
     };
 

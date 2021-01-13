@@ -59,7 +59,7 @@ std::variant<std::optional<Point>, std::string> xy(Point p1, Point p2) {
 }
 
 std::ostream &operator<<(std::ostream &os, Point p) {
-    return os << "(x=" << p.x << ", y=" << p.y << ")";
+    return os << "(" << p.x << ", " << p.y << ")";
 }
 
 bool operator==(Point lhs, Point rhs)

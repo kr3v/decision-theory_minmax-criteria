@@ -37,8 +37,8 @@ void fillTableValues(QTableWidget* w, std::vector<Point> points) {
 std::vector<Point> extractFromTableWidget(QTableWidget* w) {
     std::vector<Point> result;
     for (int row = 0; row < w->rowCount(); row++) {
-        auto x = w->item(row, 0)->text().toDouble();
-        auto y = w->item(row, 1)->text().toDouble();
+        auto x = w->item(row, 0)->text().replace(',', '.').toDouble();
+        auto y = w->item(row, 1)->text().replace(',', '.').toDouble();
         result.push_back(Point(x, y));
     }
     return result;

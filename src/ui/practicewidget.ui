@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>612</width>
-    <height>266</height>
+    <height>327</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>62</width>
+     <width>115</width>
      <height>25</height>
     </rect>
    </property>
@@ -48,7 +48,7 @@
      <x>10</x>
      <y>40</y>
      <width>591</width>
-     <height>194</height>
+     <height>257</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -79,7 +79,7 @@
         <item>
          <widget class="QRadioButton" name="radioButton_nonRandomizedSolution">
           <property name="text">
-           <string>non-randomized solution</string>
+           <string>нерандомізований розв'язок</string>
           </property>
          </widget>
         </item>
@@ -99,7 +99,7 @@
         <item>
          <widget class="QLabel" name="label_nonRandomizedSolution_index">
           <property name="text">
-           <string>i=</string>
+           <string>i:</string>
           </property>
          </widget>
         </item>
@@ -117,7 +117,7 @@
         <item>
          <widget class="QRadioButton" name="radioButton_randomizedSolution">
           <property name="text">
-           <string>randomized solution</string>
+           <string>рандомізований розв'язок</string>
           </property>
          </widget>
         </item>
@@ -126,7 +126,7 @@
           <item row="0" column="0">
            <widget class="QLabel" name="label_randomizedSolution_results_i_index">
             <property name="text">
-             <string>i=</string>
+             <string>i:</string>
             </property>
            </widget>
           </item>
@@ -140,7 +140,7 @@
           <item row="0" column="2">
            <widget class="QLabel" name="label_randomizedSolution_results_i_probability">
             <property name="text">
-             <string>probability of i-th=</string>
+             <string>вірогідність i-тої:</string>
             </property>
            </widget>
           </item>
@@ -157,7 +157,7 @@
           <item row="1" column="0">
            <widget class="QLabel" name="label_randomizedSolution_results_j_index">
             <property name="text">
-             <string>j=</string>
+             <string>j:</string>
             </property>
            </widget>
           </item>
@@ -171,7 +171,7 @@
           <item row="1" column="2">
            <widget class="QLabel" name="label_randomizedSolution_results_j_probability">
             <property name="text">
-             <string>probability of j-th=</string>
+             <string>вірогідність j-тої:</string>
             </property>
            </widget>
           </item>
@@ -196,32 +196,12 @@
           <property name="sizeConstraint">
            <enum>QLayout::SetDefaultConstraint</enum>
           </property>
-          <item row="0" column="0">
-           <widget class="QPushButton" name="button_verify">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="text">
-             <string>Verify</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QPushButton" name="button_generate">
-            <property name="text">
-             <string>Generate</string>
-            </property>
-           </widget>
-          </item>
           <item row="0" column="1">
            <layout class="QHBoxLayout" name="layout_correct">
             <item>
              <widget class="QLabel" name="label_correctName">
               <property name="text">
-               <string>Correct:</string>
+               <string>Правильних відповідей:</string>
               </property>
              </widget>
             </item>
@@ -234,12 +214,19 @@
             </item>
            </layout>
           </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="button_generate">
+            <property name="text">
+             <string>Інше завдання</string>
+            </property>
+           </widget>
+          </item>
           <item row="1" column="1">
            <layout class="QHBoxLayout" name="layout_incorrect">
             <item>
              <widget class="QLabel" name="label_incorrectName">
               <property name="text">
-               <string>Incorrect:</string>
+               <string>Неправильних відповідей:</string>
               </property>
              </widget>
             </item>
@@ -252,38 +239,36 @@
             </item>
            </layout>
           </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QVBoxLayout" name="layout_toOtherWindows">
-          <item>
-           <widget class="QPushButton" name="button_toSolverWithCurrentTask">
+          <item row="0" column="0">
+           <widget class="QPushButton" name="button_verify">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
-             <string>Solver with current task</string>
+             <string>Перевірити</string>
             </property>
            </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="layout_buttons_toStaticWindows">
-            <item>
-             <widget class="QPushButton" name="button_toTheory">
-              <property name="text">
-               <string>Theory</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="button_toSolver">
-              <property name="text">
-               <string>Solver</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
           </item>
          </layout>
         </item>
        </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_toSolverWithCurrentTask">
+        <property name="text">
+         <string>Показати розв'язок задачі</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_toTheory">
+        <property name="text">
+         <string>До теорії</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -293,7 +278,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>240</y>
+     <y>300</y>
      <width>591</width>
      <height>16</height>
     </rect>
@@ -302,6 +287,26 @@
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>10</y>
+     <width>361</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Модуль практики</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>label_error</zorder>
  </widget>
  <resources/>
  <connections/>

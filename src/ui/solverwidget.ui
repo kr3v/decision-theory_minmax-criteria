@@ -17,9 +17,9 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>10</y>
+     <y>30</y>
      <width>641</width>
-     <height>511</height>
+     <height>491</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -29,20 +29,20 @@
     </sizepolicy>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>660</x>
-     <y>10</y>
-     <width>260</width>
-     <height>515</height>
+     <y>34</y>
+     <width>261</width>
+     <height>491</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="layout_matrixItems">
     <item>
      <widget class="QLabel" name="label_paymentMatrix">
       <property name="text">
-       <string>'payment' matrix</string>
+       <string>Матриця втрат</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -118,14 +118,14 @@
       <item>
        <widget class="QPushButton" name="button_decreaseMatrixItems">
         <property name="text">
-         <string>Remove last matrix row</string>
+         <string>Видалити останній рядок</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="button_increaseMatrixItems">
         <property name="text">
-         <string>Add matrix row</string>
+         <string>Додати новий рядок</string>
         </property>
        </widget>
       </item>
@@ -134,7 +134,7 @@
     <item>
      <widget class="QLabel" name="label_solutionLog">
       <property name="text">
-       <string>solution log</string>
+       <string>Інформація про розв'язок</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -155,7 +155,7 @@ p, li { white-space: pre-wrap; }
     <item>
      <widget class="QPushButton" name="button_doSolve">
       <property name="text">
-       <string>Solve</string>
+       <string>Розв'язати</string>
       </property>
      </widget>
     </item>
@@ -164,27 +164,43 @@ p, li { white-space: pre-wrap; }
       <item>
        <widget class="QPushButton" name="button_backToPractice">
         <property name="text">
-         <string>Back to practice</string>
+         <string>До практики</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="button_toTheory">
         <property name="text">
-         <string>Theory</string>
+         <string>Теорія</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="button_toPractice">
         <property name="text">
-         <string>Practice</string>
+         <string>Практика</string>
         </property>
        </widget>
       </item>
      </layout>
     </item>
    </layout>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>911</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Модуль &quot;автоматичного ровз'язку&quot;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
  </widget>
  <customwidgets>

@@ -14,6 +14,7 @@ SOURCES += \
     src/math/double_cmp.cpp \
     src/math/geometry.cpp \
     src/math/minmaxrandomized.cpp \
+    src/math/polygon.cpp \
     src/ui/mainwindow.cpp \
     src/ui/practicewidget.cpp \
     src/ui/solverwidget.cpp \

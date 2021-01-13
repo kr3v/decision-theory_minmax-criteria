@@ -18,8 +18,6 @@ public:
     ~PracticeWidget();
 
 private slots:
-    void on_button_toSolver_clicked();
-
     void on_button_toTheory_clicked();
 
     void on_button_toSolverWithCurrentTask_clicked();
